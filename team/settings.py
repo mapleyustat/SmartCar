@@ -1,5 +1,8 @@
 # encoding: utf-8
 
+#队伍最大人数
+TEAM_MAX_MEM=4
+
 TYPE_CHOICES = (
     ('a', '电磁'),
     ('b', '摄像头'),

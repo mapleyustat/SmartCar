@@ -9,4 +9,5 @@ urlpatterns = patterns('',
     url(r'^manage/', include(admin.site.urls)),
     url(r'^accounts/',include('accounts.urls')),
     url(r'^post/', include('post.urls')),
+    url(r'^team/', include('team.urls')),
 )

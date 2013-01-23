@@ -55,7 +55,7 @@ def signup(request):
 
     return render(request,'accounts/signup.html',{'form':form})
 
-
+#激活
 def confirm(request,code=None):
     if request.user.is_authenticated():
         return redirect('/')

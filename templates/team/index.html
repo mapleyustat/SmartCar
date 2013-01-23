@@ -1,0 +1,15 @@
+{% extends 'team/base.html' %}
+
+{% block title %}参赛队伍{% endblock %}
+
+{% block content_title %}
+    <hr/>
+    <h1>参赛队伍
+        {% if user.is_superuser %}
+            <a class="btn btn-danger" href="/manage/team/team/add/">添加队伍</a>
+        {% endif %}
+    </h1>
+{% endblock %}
+
+{% block content %}
+{% endblock %}

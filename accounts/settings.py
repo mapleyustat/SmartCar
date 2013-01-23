@@ -1,8 +1,5 @@
 # encoding: utf-8
 
-#队伍最大人数
-TEAM_MAX_MEM=4
-
 GENDER_CHOICES = (
     ('M', '男'),
     ('F', '女'),
