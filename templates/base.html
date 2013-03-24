@@ -38,10 +38,6 @@
                     <li id="about"><a href="{% url about %}"><i class="icon-info-sign icon-white"></i> 关于</a></li>
                 </ul>
 
-                {% if user.is_authenticated %}
-
-                {% endif %}
-
                 <form class="navbar-form pull-right" action='{% url signin %}' method='post'>
                     {% csrf_token %}
                     {% if user.is_authenticated %}

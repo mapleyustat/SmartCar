@@ -5,11 +5,37 @@
 {% block content_title %}
     <hr/>
     <h1>参赛队伍
-        {% if user.is_superuser %}
-            <a class="btn btn-danger" href="/manage/team/team/add/">添加队伍</a>
+        {% if user.is_authenticated %}
+            {% if user.is_superuser %}
+                <a class="btn btn-danger" href="/manage/team/team/add/">添加队伍</a>
+            {% else %}
+                <a class="btn btn-danger" href="/team/create">创建队伍</a>
+            {% endif %}
         {% endif %}
     </h1>
+
 {% endblock %}
 
 {% block content %}
+    <div>
+        <form class="form-search">
+            <div class="input-append">
+                <input type="text" name="s" id="s" class="search-query">
+                <input type="button" class="btn" value="搜索">
+            </div>
+        </form>
+    </div>
+    <hr/>
+
+    {% if team_list %}
+        {% for item in team_list %}
+            <article>
+                    <h2>
+                        <a title="点击查看详情" class="t" href="/team/{{ item.slug }}/">{{ item.name }}</a>
+                    </h2>
+                    <span class="label label-inverse">{{ item.create_time|date:"Y/m/d H:i" }}</span>
+            </article>
+        {% endfor %}
+    {% endif %}
+
 {% endblock %}
