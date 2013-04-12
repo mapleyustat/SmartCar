@@ -3,7 +3,7 @@
 GENDER_CHOICES = (
     ('M', '男'),
     ('F', '女'),
-    )
+)
 
 DEPARTMENT_CHOICES = (
     ('a', '工程物理系'),
